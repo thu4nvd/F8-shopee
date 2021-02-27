@@ -48,6 +48,7 @@
 .navbar__icon-link {
     display: inline-flex;
     align-items: center;
+    position: relative;
 }
 
 .navbar__icon:hover,
@@ -98,4 +99,82 @@
 
 .navbar__has-qr:hover .qr {
     display: block;
+}
+
+
+/* header notification */
+
+.notif {
+    position: absolute;
+    top: 100%;
+    right: 0px;
+    width: 404px;
+    background-color: var(--white-color);
+    border: 1px solid #D3D3D3;
+}
+
+.notif__head {
+    height: 40px;
+    background-color: var(--white-color);
+}
+
+.notif__head h3 {
+    color: #666;
+    margin: 10px 12px;
+    font-weight: 400;
+    font-size: 1.6rem;
+    line-height: 100%;
+}
+
+.notif__list {
+    padding-left: 0px;
+}
+
+.notif__item--viewed {
+    background-color: rgba(238, 77, 45, 0.09);
+}
+
+.notif__item:hover {
+    background-color: rgba(241, 241, 241, 0.5);
+}
+
+.notif__item {
+    /* display: flex; */
+}
+
+.notif__link {
+    display: flex;
+    padding: 12px;
+    text-decoration: none;
+}
+
+.notif__img {
+    width: 48px;
+    object-fit: contain;
+}
+
+.notif__info {
+    margin-left: 12px;
+}
+
+.notif__info-name {
+    display: block;
+    font-size: 14px;
+    color: black;
+    font-weight: 500;
+    padding: 4px 0px;
+}
+
+.notif__info-desc {
+    display: block;
+    font-size: 12px;
+    color: #666;
+    padding: 4px 0px;
+}
+
+.notif__footer {
+    text-decoration: none;
+    text-align: center;
+    color: var(--text-color);
+    padding: 8px 16px;
 }
