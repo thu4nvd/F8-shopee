@@ -27,7 +27,7 @@
 .navbar__item {
     display: inline-block;
     margin: 0px 8px;
-    min-height: 26px;
+    min-height: 36px;
 }
 
 .navbar__label {
@@ -104,6 +104,10 @@
 
 /* header notification */
 
+.navbar__has-notif:hover .notif {
+    display: block;
+}
+
 .notif {
     position: absolute;
     top: 100%;
@@ -111,6 +115,35 @@
     width: 404px;
     background-color: var(--white-color);
     border: 1px solid #D3D3D3;
+    cursor: default;
+    transform-origin: calc(100% - 20px) top;
+    -webkit-animation: notifGrow ease-in 0.25s;
+    -moz-animation: notifGrow ease-in 0.25s;
+    -ms-animation: notifGrow ease-in 0.25s;
+    will-change: opacity, transform;
+    /* learn */
+    display: none;
+}
+
+.notif::before {
+    content: "";
+    border-style: solid;
+    border-width: 20px 26px;
+    border-color: transparent transparent white transparent;
+    position: absolute;
+    right: 0px;
+    top: -30px;
+}
+
+@keyframes notifGrow {
+    from {
+        opacity: 0;
+        transform: scale(0);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 .notif__head {
@@ -124,6 +157,7 @@
     font-weight: 400;
     font-size: 1.6rem;
     line-height: 100%;
+    user-select: none;
 }
 
 .notif__list {
@@ -160,9 +194,10 @@
 .notif__info-name {
     display: block;
     font-size: 14px;
-    color: black;
+    color: var(--text-color);
     font-weight: 500;
     padding: 4px 0px;
+    line-height: 1.8rem;
 }
 
 .notif__info-desc {
@@ -173,8 +208,16 @@
 }
 
 .notif__footer {
+    display: flex;
+}
+
+.notif__footer-btn {
     text-decoration: none;
     text-align: center;
     color: var(--text-color);
     padding: 8px 16px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    margin: auto;
+    width: 100%;
 }
