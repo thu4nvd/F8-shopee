@@ -3,6 +3,7 @@
     --black-color: #000;
     --text-color: #333;
     --primary-color: rgb(238, 77, 45);
+    --border-color: #dbdbdb;
 }
 
 * {
@@ -74,7 +75,40 @@ p {
     margin: auto;
     position: relative;
     z-index: 10;
-    border-radius: 5px;
+    border-radius: 8px;
+    overflow: hidden;
 }
 
-.modal__inner {}
+
+/* .modal__inner {} */
+
+
+/* button style */
+
+.btn {
+    background-color: rgba(0, 0, 0, 0.02);
+    min-width: 136px;
+    height: 36px;
+    text-decoration: none;
+    border: none;
+    border-radius: 3px;
+    font-size: 1.4rem;
+    padding: 0px;
+    outline: none;
+    cursor: pointer;
+    color: var(--text-color);
+}
+
+.btn:hover {
+    opacity: 0.7;
+}
+
+.btn--primary {
+    background-color: var(--primary-color);
+    color: var(--white-color);
+}
+
+.btn--disable {
+    cursor: default;
+    background-color: #999;
+}
